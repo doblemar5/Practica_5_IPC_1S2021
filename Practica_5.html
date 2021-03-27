@@ -1,8 +1,58 @@
 <html>
 	<head>
 		<title>Practica 5 (Ejemplo)</title>
+		<style>
+			.button {
+  				border: none;
+  				color: white;
+  				padding: 15px 32px;
+  				text-align: center;
+  				text-decoration: none;
+  				display: inline-block;
+  				font-size: 16px;
+  				margin: 4px 2px;
+				transition-duration: 0.4s;
+  				cursor: pointer;
+				}
+			.button1 {
+				background-color: white;
+				color: black;
+  				border: 2px solid #4CAF50;
+				}
+			.button1:hover {
+  				background-color: #4CAF50;
+  				color: white;
+				}
+		</style>
 	</head>
 	<body>
 		<h1> Practica 5 (Ejemplo) </h1>
+		<div>A continuación se le muestra un ejemplo de como debe de aparecer la practica 5.</div>
+		<div>
+			<p>La siguiente ecuación se usará para encontrar las raices:
+			<br> 3x^3 + 2x^2 + 5x + 10 = 0
+			</p>
+		</div>
+		<div>
+			<button class= "button button1" type="button" onclick="calcular()"> Calcular! </button> 
+			<p id="discriminant"> </p>
+		</div>
+		<script>
+		var textoD = document.getElementById("discriminant");
+
+		function calcular() {
+			var discriminante = 18*(3*2*5*10) - 4*(2**3)*10+(2**2)*(5**2)-4*3*(5**3)-27*(3**2)*(10**2);
+
+			textoD.innerHTML = "El disciminante es de " + discriminante;
+
+			if(discriminante == 0){
+				
+			} else if(discriminante <0){
+				
+			} else {
+				
+			}
+		}
+		</script>
 	</body>
 </html>
